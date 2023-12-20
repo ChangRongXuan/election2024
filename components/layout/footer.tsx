@@ -10,15 +10,17 @@ const FooterTop = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   ${breakpoint.md} {
     padding: 32px 0;
-    padding-left: calc((100vw - 286px / 2);
-    padding-right: calc((100vw - 286px / 2);
+    padding-left: calc((100vw - 286px / 2));
+    padding-right: calc((100vw - 286px / 2));
   }
+
   ${breakpoint.xl} {
     padding: 22px 0 30px 0;
-    padding-left: calc((100vw - 1120px / 2);
-    padding-right: calc((100vw - 1120px / 2);
+    padding-left: calc((100vw - 1120px / 2));
+    padding-right: calc((100vw - 1120px / 2));
     flex-direction: row;
     align-items: center;
     position: relative;
@@ -29,6 +31,8 @@ const TopLeft = styled.div`
   flex-direction: column;
   align-items: center;
   display: none;
+  outline: 1px solid white;
+
   ${breakpoint.xl} {
     display: flex;
   }
@@ -68,9 +72,6 @@ const InfoWrapper = styled.ul`
 const InfoItem = styled.li`
   display: flex;
   justify-content: center;
-
-    justify-content: inherit;
-  }
 `;
 
 const TopRight = styled.div`
@@ -115,27 +116,27 @@ const MobileIcons = styled.nav`
   a {
     padding: 14px 8px;
   }
-  @include media-breakpoint-up(xl) {
+  ${breakpoint.xl} {
     margin-top: 8px;
   }
-  @include media-breakpoint-up(xl) {
+  ${breakpoint.xl} {
     display: none;
   }
 `;
 
 const FooterBottom = styled.section`
-padding: 20px 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-${breakpoint.md} {
-  padding: 32px 0;
-  padding-left: calc((100vw - 286px / 2);
-  padding-right: calc((100vw - 286px / 2);
-}
-${breakpoint.xl} {
   padding: 20px 0;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${breakpoint.md} {
+    padding: 32px 0;
+    padding-left: calc((100vw - 286px / 2));
+    padding-right: calc((100vw - 286px / 2));
+  }
+  ${breakpoint.xl} {
+    padding: 20px 0;
+  }
 `;
 
 const Copyright = styled.p`
@@ -293,69 +294,6 @@ export default function Header(): JSX.Element {
           })}
         </MobileIcons>
       </FooterTop>
-      {/* <FooterBottom>
-        <Copyright>
-          <span>©Mirror TV BROADCASTING LTD.</span>
-          <span>All Rights Reserved.</span>
-          <span>鏡電視股份有限公司 版權所有</span>
-        </Copyright>
-        <YoutubeTos>
-          本網頁使用
-          <Link
-            href='https://developers.google.com/youtube/terms/developer-policies#definition-youtube-api-services'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            YouTube API 服務{' '}
-          </Link>
-          ，詳見
-          <Link
-            href='https://www.youtube.com/t/terms'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            YouTube 服務條款
-          </Link>
-          、
-          <Link
-            href='https://policies.google.com/privacy'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            Google 隱私權與條款
-          </Link>
-        </YoutubeTos>
-      </FooterBottom> */}
     </footer>
   );
 }
-
-/* <style lang="scss" scoped>
-
-
-.social-network-services-nav,
-.top-wrapper__mobile-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  a {
-    padding: 14px 8px;
-  }
-}
-
-.social-network-service-img,
-.top-wrapper__mobile-icons {
-  &[alt='facebook'],
-  &[alt='instagram'] {
-    height: 20px;
-  }
-  &[alt='twitter'],
-  &[alt='line'] {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-
-
-</style> */
